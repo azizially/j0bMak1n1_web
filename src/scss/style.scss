@@ -1,0 +1,484 @@
+//MAIN SASS FILE
+
+
+
+$bg-color:#fff;
+$font-color:#333;
+$inner-font:#4a4a4a;
+$custom-font:#797979;
+$primary-color:#887F73;
+$image-bg-color:#929292;
+$link-scroll:#6F6F6F;
+$brand-scroll:#777;
+$separator-col:#fed136;
+$brown-overlay: rgba(51, 51, 51, 0.4);
+
+
+
+html,body{
+	background-color: $bg-color;
+	color:$custom-font;
+	font-size: 14px;
+	width: 100%;
+	padding: 0;
+	margin-left: 0;
+	margin-right: 0;
+	font-weight: 400;
+	width: 100%;
+	font-family: 'Raleway', sans-serif;
+	line-height: 1.5rem;
+	overflow-x: hidden;
+	box-sizing: border-box;
+}
+
+p {
+  line-height: 1.75;
+}
+
+a {
+  color: #fed136;
+}
+
+a:hover {
+  color: #fec503;
+}
+
+.text-primary {
+  color: #fed136 !important;
+}
+
+section {
+  padding: 100px 0;
+}
+
+section h2.section-heading {
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+section h3.section-subheading {
+  font-size: 16px;
+  font-weight: 400;
+  font-style: italic;
+  margin-bottom: 75px;
+  text-transform: none;
+  font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+@media (min-width: 768px) {
+  section {
+    padding: 150px 0;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+
+/*
+Button
+*/
+
+.btn {
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+}
+
+.btn-lg {
+  font-size: 18px;
+  padding: 1rem 3rem;
+  border-radius: 0;
+}
+
+.btn-primary {
+  background-color: #fed136;
+  border-color: #fed136;
+}
+
+.btn-primary:active, .btn-primary:focus, .btn-primary:hover {
+  background-color: #fec810 !important;
+  border-color: #fec810 !important;
+  color: white;
+}
+
+.btn-primary:active, .btn-primary:focus {
+  box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important;
+}
+
+::-moz-selection {
+  background: #fed136;
+  text-shadow: none;
+}
+
+::selection {
+  background: #fed136;
+  text-shadow: none;
+}
+
+img::selection {
+  background: transparent;
+}
+
+img::-moz-selection {
+  background: transparent;
+}
+
+
+/*
+Separator
+*/
+
+.separator_left {
+	width: 85px;
+	height: 2px;
+	margin: 20px 0px;
+	background: $separator-col;
+}
+
+.separator_auto {
+	width: 85px;
+	height: 2px;
+	margin: 20px auto;
+	background: $separator-col;
+}
+
+.separator_small {
+	width: 30px;
+	height: 2px;
+	margin: 20px 0px;
+	background: $separator-col;
+}
+
+
+/*CUSTOM TOGGLER ICON*/
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(254,209,54, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: transparent;
+} 
+
+
+#main-nav {
+  background-color: rgba(33,37,41,0.1);
+}
+
+
+
+/* NAVBAR */
+
+#main-nav .navbar-toggler {
+  font-size: 12px;
+  right: 0;
+  padding: 13px;
+  text-transform: uppercase;
+  color: white;
+  border: 0;
+  /* background-color: #fed136; */
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+#main-nav .navbar-brand {
+  color: #fed136;
+  font-family: 'Kaushan Script', 'Helvetica Neue', Helvetica, Arial, cursive;
+}
+
+#main-nav .navbar-brand.active, #main-nav .navbar-brand:active, #main-nav .navbar-brand:focus, #main-nav .navbar-brand:hover {
+  color: #fec503;
+}																												
+
+#main-nav .navbar-nav .nav-item .nav-link {
+	font-size: 90%;
+	font-weight: 400;
+    padding: 0.75em 0;
+    letter-spacing: 1px;
+    color: $bg-color;
+    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	transition: 0.3s ease-in-out;
+}
+
+#main-nav .navbar-nav .nav-item .nav-link.active, #main-nav .navbar-nav .nav-item .nav-link:hover {
+    color: #fed136;
+}
+
+@media (min-width: 992px) {
+  #main-nav {
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
+    -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
+    -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
+    transition: padding-top 0.3s, padding-bottom 0.3s;
+    border: none;
+    background-color: transparent;
+  }
+  #main-nav .navbar-brand {
+    font-size: 1.75em;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+
+  /*SCROLLING EFFECT*/
+  #main-nav .navbar-nav .nav-item .nav-link {
+    padding: 1.1em 1em !important;
+  }
+  #main-nav.navbar-shrink {
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    background-color: rgba(33,37,41,0.5);
+  }
+  #main-nav.navbar-shrink .navbar-brand {
+    font-size: 1.25em;
+    padding: 0.85rem 0;
+  }
+}
+
+
+/*<--#HOME SECTION-->*/
+#home-section{
+	background:url('../img/man-notebook-notes-macbook.jpg')no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-color:$image-bg-color;
+	background-position: center;
+	min-height: 100vh;
+	margin-bottom: 100px;
+	font-family: Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif;	
+}
+
+
+.brown-overlay{
+	background-color:$brown-overlay;
+	position:absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	min-height: 100vh;
+}
+
+#home-section .home-inner {
+	padding-top:300px;
+	padding-bottom: 150px;
+}
+
+#home-section .intro-lead-in {
+    font-size: 2.8rem;
+    font-style: italic;
+    line-height: 2.8rem;
+    margin-bottom: 1.7rem;
+    font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+#home-section .intro-heading {
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 5.3rem;
+    margin-bottom: 3.5rem;
+    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+#home-section #intro-btn {
+	padding: 1.2rem 2.7rem;
+	font-size: 1.5rem;
+	color: rgba(33,37,41,0.8) !important;
+}
+
+
+@media (max-width: 767px){
+	#main-nav{
+		/* background: rgba(91,91,98,0.5); */
+		background:rgba(33,37,41,0.5);
+		transition: background-color 300ms linear;
+	}
+
+	#home-section{
+		background:url('../img/man-notebook-notes-macbook_1280x853.jpg')no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+		background-position: center;
+		min-height: 100vh;
+	}
+		
+	#home-section .home-inner{
+		padding-top:300px;
+		padding-bottom: 100px;
+	}
+
+	#home-section .intro-lead-in{
+	    font-size: 1.5rem;
+	    font-style: italic;
+	    line-height: 1.5rem;
+	    margin-bottom: 1.7rem;
+	    font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	}
+
+	#home-section .intro-heading {
+		 font-size: 3.5rem;
+		 font-weight: 600;
+		 line-height: 3.5rem;
+		 margin-bottom: 1.5rem;
+		 font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	}		
+} 
+
+
+
+
+/*ABOUT SECTION*/
+#about{
+	padding: 1rem 0;
+}
+
+#about .about_content h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    line-height: 3rem;
+}
+#about .about_btns a{
+	border: 1px solid #f5f5f5;
+    background-color: rgba(33,37,41,0.5); /*rgba(77,106,134,0.7)*/
+    color: #fff;
+    padding: 1rem 2rem;
+}
+
+.about_accordion #accordion h5 a{
+	display: block;
+    color: #6a6a6a;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: normal;
+    overflow: hidden;
+}
+
+.about_accordion #accordion h5 a:hover , .about_accordion #accordion h5 a:active, .about_accordion #accordion h5 a:focus {
+outline: none;
+}
+
+.about_accordion #accordion .card{
+	margin-bottom: 0.7rem;
+	border-radius: 0;
+	border-top: 0;
+}
+
+
+.about_accordion #accordion .card-header{
+	background: $bg-color;
+	padding: 0;
+	border-bottom: 0;
+}
+
+.about_accordion #accordion .card-body{
+	padding: 1.75rem;
+}
+
+	
+/* About Bottom Contents: */ 
+
+#about_bottom_content{
+	background: #f2f2f2;
+	padding:7rem 2.5rem;
+}
+
+
+
+#about_bottom_content .main_header {
+	padding: 50px;
+}
+#about_bottom_content .main_header .head_title {
+	padding-bottom: 1.3rem;
+	overflow: hidden;
+}
+
+#about_bottom_content .main_header .head_title h2 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 500;
+	font-size: 2.286rem;
+	color: #1a1a1a;
+}
+
+#about_bottom_content .main_header .head_title p {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+	font-size: 1rem;
+	color: #4a4a4a;
+}
+
+
+#about_bottom_content .bottom_item h5{
+	font-size: 1.1rem;
+	font-weight: 600;
+	color: #1a1a1a;
+}
+
+
+#about_bottom_content .bottom_item .top_border {
+	height: 0.28rem;
+	width: 100%;
+	background-color: #fed136;
+}
+
+#about_bottom_content .bottom_item {
+	position: relative;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
+	margin-bottom:  30px;
+}
+
+#about_bottom_content .bottom_item .bottom_body {
+	padding: 3.5rem 2.5rem;
+	overflow: hidden;
+}
+
+#about_bottom_content .bottom_item .bottom_head{
+	background-color: #f7f7f7;
+	padding: 2rem;
+}
+	
+
+.rotate{
+    width: 3.5rem;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    background-color: #eeeeee;
+    text-align: center;
+    color: #444444;
+    margin: 0 1rem 0 0;
+}
+
+.card-header .new-border{
+	border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.open {
+	background-color: #444444;
+	color: $bg-color;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+
+/*Services*/
+
+#services .main_service{
+	margin-bottom: 5rem;
+}
+
+#services .service_item{
+	margin-bottom: 1rem;
+	padding: 0.3rem 2rem;
+}
+
+.section-heading, .service-heading{
+	color: $font-color;
+}
+.service-heading {
+  margin: 0.5rem 0;
+  text-transform: none;
+}
