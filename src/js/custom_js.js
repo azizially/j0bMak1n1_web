@@ -3,13 +3,13 @@
 
 $(document).ready(function(){
    //Rotate font-awesome icon
-   $(".rotate").click(function(){
-    var rgb_val='1px solid rgba(0, 0, 0, 0.125)';
-      $(this).toggleClass("open");
-      $(this).closest('.card-header').toggleClass("new-border");
-  });    
-});
+   $(".rotate").click(function(event){
+    //var rgb_val='1px solid rgba(0, 0, 0, 0.125)';
+    $(this).find("i").toggleClass("open");
 
+      $(this).closest('.card-header').toggleClass("new-border");
+    });    
+});
 
 (function($) {
   "use strict"; // Start of use strict
@@ -41,7 +41,7 @@ $(document).ready(function(){
 
   // Collapse Navbar
   var navbarCollapse = function() {
-    if ($("#main-nav").offset().top > 19) {
+    if ($("#main-nav").offset().top > 100) {
       $("#main-nav").addClass("navbar-shrink");
     } else {
       $("#main-nav").removeClass("navbar-shrink");
